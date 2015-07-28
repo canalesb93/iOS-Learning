@@ -130,19 +130,19 @@ class ViewController: UIViewController {
     
     // Shows results(label and button)
     func showResults(){
-            print("TESTS shouldnt be here")
-            resultLabel.hidden = false
-            playAgainButton.hidden = false
-        
+        print("TESTS shouldnt be here")
+        resultLabel.hidden = false
+        playAgainButton.hidden = false
+    
 
-        
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.resultLabel.transform = CGAffineTransformIdentity
-                self.playAgainButton.transform = CGAffineTransformIdentity
+    
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.resultLabel.transform = CGAffineTransformIdentity
+            self.playAgainButton.transform = CGAffineTransformIdentity
 //                self.resultLabel.center = CGPointMake(self.resultLabel.center.x + 400, self.resultLabel.center.y)
 //                
 //                self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 400, self.playAgainButton.center.y)
-            })
+        })
     }
 
 

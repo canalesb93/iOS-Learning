@@ -18,20 +18,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z2P-cb-DnT">
-                                <rect key="frame" x="-4" y="20" width="383" height="647"/>
+                                <rect key="frame" x="-8" y="20" width="391" height="603"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAj-Bw-Nyr">
+                                <rect key="frame" x="-4" y="623" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="c4e-EV-h1E"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WFY-wx-EkY"/>
+                                    <barButtonItem title="Start Tracking" id="fkg-9F-iop">
+                                        <connections>
+                                            <action selector="trackLocation:" destination="BYZ-38-t0r" id="v24-rA-vaU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z2P-cb-DnT" secondAttribute="bottom" id="BpV-pg-rWF"/>
-                            <constraint firstItem="z2P-cb-DnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mcx-Hs-kha"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z2P-cb-DnT" secondAttribute="trailing" constant="-20" id="caW-zf-Jz0"/>
-                            <constraint firstItem="z2P-cb-DnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kIs-uq-L4v"/>
+                            <constraint firstItem="z2P-cb-DnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Gh-oQ-UVd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZAj-Bw-Nyr" secondAttribute="trailing" constant="-20" id="4DK-sv-Rzt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZAj-Bw-Nyr" secondAttribute="bottom" id="FlD-dR-R14"/>
+                            <constraint firstItem="z2P-cb-DnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="MwA-N7-lWo"/>
+                            <constraint firstItem="ZAj-Bw-Nyr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SsS-B9-P7v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z2P-cb-DnT" secondAttribute="trailing" constant="-24" id="YvO-w9-a3q"/>
+                            <constraint firstItem="ZAj-Bw-Nyr" firstAttribute="top" secondItem="z2P-cb-DnT" secondAttribute="bottom" id="fpL-DU-3Kc"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="map" destination="z2P-cb-DnT" id="euJ-Va-ChY"/>
+                        <outlet property="trackingButton" destination="fkg-9F-iop" id="P7z-69-14x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

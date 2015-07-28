@@ -12,8 +12,10 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var trackingButton: UIBarButtonItem!
     
     var locationManager = CLLocationManager()
+    var tracking = false
     
     var annotation = MKPointAnnotation()
 //    var annotation = MKAnnotationView
@@ -25,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
+
         
         map.delegate = self
         
@@ -52,9 +54,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         map.addAnnotation(annotationTemp)
         
         // Global annotation
-
-//        annotation.image = UIImage(named: "icon.png")
-        
+        annotation.title = "Last known location"
+        annotation.subtitle = "Last tracked location recieved by device"
         // Add gesture
         let uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         uilpgr.minimumPressDuration = 1.2
@@ -65,7 +66,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     // called when annotation is added
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        print("Doing something!")
+
         let identifier = "pin"
         
         var view: MKAnnotationView
@@ -136,6 +137,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
     }
     
+    
+    @IBAction func trackLocation(sender: AnyObject) {
+        if tracking {
+            locationManager.stopUpdatingLocation()
+            trackingButton.title = "Start Tracking"
+        } else {
+            locationManager.startUpdatingLocation()
+            trackingButton.title = "Stop Tracking"
+        }
+        tracking = !tracking
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

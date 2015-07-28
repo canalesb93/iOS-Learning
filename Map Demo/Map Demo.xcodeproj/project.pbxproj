@@ -15,8 +15,7 @@
 		0A27F0B51B65F18C00EA2BAA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A27F0B41B65F18C00EA2BAA /* CoreLocation.framework */; };
 		0A27F0BC1B660BD500EA2BAA /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27F0BA1B660BD500EA2BAA /* star.png */; };
 		0A27F0BD1B660BD500EA2BAA /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27F0BB1B660BD500EA2BAA /* star@2x.png */; };
-		0A27F0C11B660E0000EA2BAA /* AttractionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27F0C01B660E0000EA2BAA /* AttractionAnnotation.swift */; };
-		0A27F0C31B660E3200EA2BAA /* AttractionAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27F0C21B660E3200EA2BAA /* AttractionAnnotationView.swift */; };
+		0A27F0C51B66144F00EA2BAA /* pinIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27F0C41B66144F00EA2BAA /* pinIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,7 @@
 		0A27F0B41B65F18C00EA2BAA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A27F0BA1B660BD500EA2BAA /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		0A27F0BB1B660BD500EA2BAA /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		0A27F0C01B660E0000EA2BAA /* AttractionAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
-		0A27F0C21B660E3200EA2BAA /* AttractionAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotationView.swift; sourceTree = "<group>"; };
+		0A27F0C41B66144F00EA2BAA /* pinIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +66,11 @@
 			children = (
 				0A27F0A21B65E8FD00EA2BAA /* AppDelegate.swift */,
 				0A27F0A41B65E8FD00EA2BAA /* ViewController.swift */,
-				0A27F0C01B660E0000EA2BAA /* AttractionAnnotation.swift */,
-				0A27F0C21B660E3200EA2BAA /* AttractionAnnotationView.swift */,
 				0A27F0A61B65E8FD00EA2BAA /* Main.storyboard */,
 				0A27F0A91B65E8FD00EA2BAA /* Assets.xcassets */,
 				0A27F0AB1B65E8FD00EA2BAA /* LaunchScreen.storyboard */,
 				0A27F0AE1B65E8FD00EA2BAA /* Info.plist */,
+				0A27F0C41B66144F00EA2BAA /* pinIcon.png */,
 				0A27F0BA1B660BD500EA2BAA /* star.png */,
 				0A27F0BB1B660BD500EA2BAA /* star@2x.png */,
 			);
@@ -138,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A27F0C51B66144F00EA2BAA /* pinIcon.png in Resources */,
 				0A27F0BD1B660BD500EA2BAA /* star@2x.png in Resources */,
 				0A27F0AD1B65E8FD00EA2BAA /* LaunchScreen.storyboard in Resources */,
 				0A27F0BC1B660BD500EA2BAA /* star.png in Resources */,
@@ -153,10 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A27F0C31B660E3200EA2BAA /* AttractionAnnotationView.swift in Sources */,
 				0A27F0A51B65E8FD00EA2BAA /* ViewController.swift in Sources */,
 				0A27F0A31B65E8FD00EA2BAA /* AppDelegate.swift in Sources */,
-				0A27F0C11B660E0000EA2BAA /* AttractionAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
